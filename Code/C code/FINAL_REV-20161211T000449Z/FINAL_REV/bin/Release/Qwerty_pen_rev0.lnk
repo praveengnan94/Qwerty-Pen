@@ -1,0 +1,28 @@
+-myuxi
+-Y
+-v 0x7fff
+-w 0x8000
+-b HOME = 0x0000
+-b ISEG = 0x0080
+-b BSEG = 0x0000
+-k C:\Program Files (x86)\SDCC\lib
+-k C:\Program Files (x86)\SDCC\bin\..\lib\large
+-l mcs51
+-l libsdcc
+-l libint
+-l liblong
+-l libfloat
+obj\Release\custom_logo.rel
+obj\Release\delays.rel
+obj\Release\expander.rel
+obj\Release\i2c.rel
+obj\Release\lcd.rel
+obj\Release\main.rel
+obj\Release\menu.rel
+obj\Release\servo.rel
+obj\Release\shapes.rel
+obj\Release\stepper_xy.rel
+obj\Release\system.rel
+obj\Release\text.rel
+
+-e

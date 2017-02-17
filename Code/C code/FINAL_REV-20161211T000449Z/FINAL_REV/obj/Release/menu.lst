@@ -1,0 +1,1238 @@
+                              1 ;--------------------------------------------------------
+                              2 ; File Created by SDCC : FreeWare ANSI-C Compiler
+                              3 ; Version 2.6.0 #4309 (Jul 28 2006)
+                              4 ; This file generated Mon Dec 05 17:16:27 2016
+                              5 ;--------------------------------------------------------
+                              6 	.module menu
+                              7 	.optsdcc -mmcs51 --model-large
+                              8 	
+                              9 ;--------------------------------------------------------
+                             10 ; Public variables in this module
+                             11 ;--------------------------------------------------------
+                             12 	.globl _P5_7
+                             13 	.globl _P5_6
+                             14 	.globl _P5_5
+                             15 	.globl _P5_4
+                             16 	.globl _P5_3
+                             17 	.globl _P5_2
+                             18 	.globl _P5_1
+                             19 	.globl _P5_0
+                             20 	.globl _P4_7
+                             21 	.globl _P4_6
+                             22 	.globl _P4_5
+                             23 	.globl _P4_4
+                             24 	.globl _P4_3
+                             25 	.globl _P4_2
+                             26 	.globl _P4_1
+                             27 	.globl _P4_0
+                             28 	.globl _PX0L
+                             29 	.globl _PT0L
+                             30 	.globl _PX1L
+                             31 	.globl _PT1L
+                             32 	.globl _PLS
+                             33 	.globl _PT2L
+                             34 	.globl _PPCL
+                             35 	.globl _EC
+                             36 	.globl _CCF0
+                             37 	.globl _CCF1
+                             38 	.globl _CCF2
+                             39 	.globl _CCF3
+                             40 	.globl _CCF4
+                             41 	.globl _CR
+                             42 	.globl _CF
+                             43 	.globl _TF2
+                             44 	.globl _EXF2
+                             45 	.globl _RCLK
+                             46 	.globl _TCLK
+                             47 	.globl _EXEN2
+                             48 	.globl _TR2
+                             49 	.globl _C_T2
+                             50 	.globl _CP_RL2
+                             51 	.globl _T2CON_7
+                             52 	.globl _T2CON_6
+                             53 	.globl _T2CON_5
+                             54 	.globl _T2CON_4
+                             55 	.globl _T2CON_3
+                             56 	.globl _T2CON_2
+                             57 	.globl _T2CON_1
+                             58 	.globl _T2CON_0
+                             59 	.globl _PT2
+                             60 	.globl _ET2
+                             61 	.globl _CY
+                             62 	.globl _AC
+                             63 	.globl _F0
+                             64 	.globl _RS1
+                             65 	.globl _RS0
+                             66 	.globl _OV
+                             67 	.globl _F1
+                             68 	.globl _P
+                             69 	.globl _PS
+                             70 	.globl _PT1
+                             71 	.globl _PX1
+                             72 	.globl _PT0
+                             73 	.globl _PX0
+                             74 	.globl _RD
+                             75 	.globl _WR
+                             76 	.globl _T1
+                             77 	.globl _T0
+                             78 	.globl _INT1
+                             79 	.globl _INT0
+                             80 	.globl _TXD
+                             81 	.globl _RXD
+                             82 	.globl _P3_7
+                             83 	.globl _P3_6
+                             84 	.globl _P3_5
+                             85 	.globl _P3_4
+                             86 	.globl _P3_3
+                             87 	.globl _P3_2
+                             88 	.globl _P3_1
+                             89 	.globl _P3_0
+                             90 	.globl _EA
+                             91 	.globl _ES
+                             92 	.globl _ET1
+                             93 	.globl _EX1
+                             94 	.globl _ET0
+                             95 	.globl _EX0
+                             96 	.globl _P2_7
+                             97 	.globl _P2_6
+                             98 	.globl _P2_5
+                             99 	.globl _P2_4
+                            100 	.globl _P2_3
+                            101 	.globl _P2_2
+                            102 	.globl _P2_1
+                            103 	.globl _P2_0
+                            104 	.globl _SM0
+                            105 	.globl _SM1
+                            106 	.globl _SM2
+                            107 	.globl _REN
+                            108 	.globl _TB8
+                            109 	.globl _RB8
+                            110 	.globl _TI
+                            111 	.globl _RI
+                            112 	.globl _P1_7
+                            113 	.globl _P1_6
+                            114 	.globl _P1_5
+                            115 	.globl _P1_4
+                            116 	.globl _P1_3
+                            117 	.globl _P1_2
+                            118 	.globl _P1_1
+                            119 	.globl _P1_0
+                            120 	.globl _TF1
+                            121 	.globl _TR1
+                            122 	.globl _TF0
+                            123 	.globl _TR0
+                            124 	.globl _IE1
+                            125 	.globl _IT1
+                            126 	.globl _IE0
+                            127 	.globl _IT0
+                            128 	.globl _P0_7
+                            129 	.globl _P0_6
+                            130 	.globl _P0_5
+                            131 	.globl _P0_4
+                            132 	.globl _P0_3
+                            133 	.globl _P0_2
+                            134 	.globl _P0_1
+                            135 	.globl _P0_0
+                            136 	.globl _EECON
+                            137 	.globl _KBF
+                            138 	.globl _KBE
+                            139 	.globl _KBLS
+                            140 	.globl _BRL
+                            141 	.globl _BDRCON
+                            142 	.globl _T2MOD
+                            143 	.globl _SPDAT
+                            144 	.globl _SPSTA
+                            145 	.globl _SPCON
+                            146 	.globl _SADEN
+                            147 	.globl _SADDR
+                            148 	.globl _WDTPRG
+                            149 	.globl _WDTRST
+                            150 	.globl _P5
+                            151 	.globl _P4
+                            152 	.globl _IPH1
+                            153 	.globl _IPL1
+                            154 	.globl _IPH0
+                            155 	.globl _IPL0
+                            156 	.globl _IEN1
+                            157 	.globl _IEN0
+                            158 	.globl _CMOD
+                            159 	.globl _CL
+                            160 	.globl _CH
+                            161 	.globl _CCON
+                            162 	.globl _CCAPM4
+                            163 	.globl _CCAPM3
+                            164 	.globl _CCAPM2
+                            165 	.globl _CCAPM1
+                            166 	.globl _CCAPM0
+                            167 	.globl _CCAP4L
+                            168 	.globl _CCAP3L
+                            169 	.globl _CCAP2L
+                            170 	.globl _CCAP1L
+                            171 	.globl _CCAP0L
+                            172 	.globl _CCAP4H
+                            173 	.globl _CCAP3H
+                            174 	.globl _CCAP2H
+                            175 	.globl _CCAP1H
+                            176 	.globl _CCAP0H
+                            177 	.globl _CKCKON1
+                            178 	.globl _CKCKON0
+                            179 	.globl _CKRL
+                            180 	.globl _AUXR1
+                            181 	.globl _AUXR
+                            182 	.globl _TH2
+                            183 	.globl _TL2
+                            184 	.globl _RCAP2H
+                            185 	.globl _RCAP2L
+                            186 	.globl _T2CON
+                            187 	.globl _B
+                            188 	.globl _ACC
+                            189 	.globl _PSW
+                            190 	.globl _IP
+                            191 	.globl _P3
+                            192 	.globl _IE
+                            193 	.globl _P2
+                            194 	.globl _SBUF
+                            195 	.globl _SCON
+                            196 	.globl _P1
+                            197 	.globl _TH1
+                            198 	.globl _TH0
+                            199 	.globl _TL1
+                            200 	.globl _TL0
+                            201 	.globl _TMOD
+                            202 	.globl _TCON
+                            203 	.globl _PCON
+                            204 	.globl _DPH
+                            205 	.globl _DPL
+                            206 	.globl _SP
+                            207 	.globl _P0
+                            208 	.globl _in_origin
+                            209 	.globl _origin_menu_1_1
+                            210 	.globl _quick_menu_1_2
+                            211 	.globl _custom_menu_1_3
+                            212 ;--------------------------------------------------------
+                            213 ; special function registers
+                            214 ;--------------------------------------------------------
+                            215 	.area RSEG    (DATA)
+                    0080    216 _P0	=	0x0080
+                    0081    217 _SP	=	0x0081
+                    0082    218 _DPL	=	0x0082
+                    0083    219 _DPH	=	0x0083
+                    0087    220 _PCON	=	0x0087
+                    0088    221 _TCON	=	0x0088
+                    0089    222 _TMOD	=	0x0089
+                    008A    223 _TL0	=	0x008a
+                    008B    224 _TL1	=	0x008b
+                    008C    225 _TH0	=	0x008c
+                    008D    226 _TH1	=	0x008d
+                    0090    227 _P1	=	0x0090
+                    0098    228 _SCON	=	0x0098
+                    0099    229 _SBUF	=	0x0099
+                    00A0    230 _P2	=	0x00a0
+                    00A8    231 _IE	=	0x00a8
+                    00B0    232 _P3	=	0x00b0
+                    00B8    233 _IP	=	0x00b8
+                    00D0    234 _PSW	=	0x00d0
+                    00E0    235 _ACC	=	0x00e0
+                    00F0    236 _B	=	0x00f0
+                    00C8    237 _T2CON	=	0x00c8
+                    00CA    238 _RCAP2L	=	0x00ca
+                    00CB    239 _RCAP2H	=	0x00cb
+                    00CC    240 _TL2	=	0x00cc
+                    00CD    241 _TH2	=	0x00cd
+                    008E    242 _AUXR	=	0x008e
+                    00A2    243 _AUXR1	=	0x00a2
+                    0097    244 _CKRL	=	0x0097
+                    008F    245 _CKCKON0	=	0x008f
+                    008F    246 _CKCKON1	=	0x008f
+                    00FA    247 _CCAP0H	=	0x00fa
+                    00FB    248 _CCAP1H	=	0x00fb
+                    00FC    249 _CCAP2H	=	0x00fc
+                    00FD    250 _CCAP3H	=	0x00fd
+                    00FE    251 _CCAP4H	=	0x00fe
+                    00EA    252 _CCAP0L	=	0x00ea
+                    00EB    253 _CCAP1L	=	0x00eb
+                    00EC    254 _CCAP2L	=	0x00ec
+                    00ED    255 _CCAP3L	=	0x00ed
+                    00EE    256 _CCAP4L	=	0x00ee
+                    00DA    257 _CCAPM0	=	0x00da
+                    00DB    258 _CCAPM1	=	0x00db
+                    00DC    259 _CCAPM2	=	0x00dc
+                    00DD    260 _CCAPM3	=	0x00dd
+                    00DE    261 _CCAPM4	=	0x00de
+                    00D8    262 _CCON	=	0x00d8
+                    00F9    263 _CH	=	0x00f9
+                    00E9    264 _CL	=	0x00e9
+                    00D9    265 _CMOD	=	0x00d9
+                    00A8    266 _IEN0	=	0x00a8
+                    00B1    267 _IEN1	=	0x00b1
+                    00B8    268 _IPL0	=	0x00b8
+                    00B7    269 _IPH0	=	0x00b7
+                    00B2    270 _IPL1	=	0x00b2
+                    00B3    271 _IPH1	=	0x00b3
+                    00C0    272 _P4	=	0x00c0
+                    00D8    273 _P5	=	0x00d8
+                    00A6    274 _WDTRST	=	0x00a6
+                    00A7    275 _WDTPRG	=	0x00a7
+                    00A9    276 _SADDR	=	0x00a9
+                    00B9    277 _SADEN	=	0x00b9
+                    00C3    278 _SPCON	=	0x00c3
+                    00C4    279 _SPSTA	=	0x00c4
+                    00C5    280 _SPDAT	=	0x00c5
+                    00C9    281 _T2MOD	=	0x00c9
+                    009B    282 _BDRCON	=	0x009b
+                    009A    283 _BRL	=	0x009a
+                    009C    284 _KBLS	=	0x009c
+                    009D    285 _KBE	=	0x009d
+                    009E    286 _KBF	=	0x009e
+                    00D2    287 _EECON	=	0x00d2
+                            288 ;--------------------------------------------------------
+                            289 ; special function bits
+                            290 ;--------------------------------------------------------
+                            291 	.area RSEG    (DATA)
+                    0080    292 _P0_0	=	0x0080
+                    0081    293 _P0_1	=	0x0081
+                    0082    294 _P0_2	=	0x0082
+                    0083    295 _P0_3	=	0x0083
+                    0084    296 _P0_4	=	0x0084
+                    0085    297 _P0_5	=	0x0085
+                    0086    298 _P0_6	=	0x0086
+                    0087    299 _P0_7	=	0x0087
+                    0088    300 _IT0	=	0x0088
+                    0089    301 _IE0	=	0x0089
+                    008A    302 _IT1	=	0x008a
+                    008B    303 _IE1	=	0x008b
+                    008C    304 _TR0	=	0x008c
+                    008D    305 _TF0	=	0x008d
+                    008E    306 _TR1	=	0x008e
+                    008F    307 _TF1	=	0x008f
+                    0090    308 _P1_0	=	0x0090
+                    0091    309 _P1_1	=	0x0091
+                    0092    310 _P1_2	=	0x0092
+                    0093    311 _P1_3	=	0x0093
+                    0094    312 _P1_4	=	0x0094
+                    0095    313 _P1_5	=	0x0095
+                    0096    314 _P1_6	=	0x0096
+                    0097    315 _P1_7	=	0x0097
+                    0098    316 _RI	=	0x0098
+                    0099    317 _TI	=	0x0099
+                    009A    318 _RB8	=	0x009a
+                    009B    319 _TB8	=	0x009b
+                    009C    320 _REN	=	0x009c
+                    009D    321 _SM2	=	0x009d
+                    009E    322 _SM1	=	0x009e
+                    009F    323 _SM0	=	0x009f
+                    00A0    324 _P2_0	=	0x00a0
+                    00A1    325 _P2_1	=	0x00a1
+                    00A2    326 _P2_2	=	0x00a2
+                    00A3    327 _P2_3	=	0x00a3
+                    00A4    328 _P2_4	=	0x00a4
+                    00A5    329 _P2_5	=	0x00a5
+                    00A6    330 _P2_6	=	0x00a6
+                    00A7    331 _P2_7	=	0x00a7
+                    00A8    332 _EX0	=	0x00a8
+                    00A9    333 _ET0	=	0x00a9
+                    00AA    334 _EX1	=	0x00aa
+                    00AB    335 _ET1	=	0x00ab
+                    00AC    336 _ES	=	0x00ac
+                    00AF    337 _EA	=	0x00af
+                    00B0    338 _P3_0	=	0x00b0
+                    00B1    339 _P3_1	=	0x00b1
+                    00B2    340 _P3_2	=	0x00b2
+                    00B3    341 _P3_3	=	0x00b3
+                    00B4    342 _P3_4	=	0x00b4
+                    00B5    343 _P3_5	=	0x00b5
+                    00B6    344 _P3_6	=	0x00b6
+                    00B7    345 _P3_7	=	0x00b7
+                    00B0    346 _RXD	=	0x00b0
+                    00B1    347 _TXD	=	0x00b1
+                    00B2    348 _INT0	=	0x00b2
+                    00B3    349 _INT1	=	0x00b3
+                    00B4    350 _T0	=	0x00b4
+                    00B5    351 _T1	=	0x00b5
+                    00B6    352 _WR	=	0x00b6
+                    00B7    353 _RD	=	0x00b7
+                    00B8    354 _PX0	=	0x00b8
+                    00B9    355 _PT0	=	0x00b9
+                    00BA    356 _PX1	=	0x00ba
+                    00BB    357 _PT1	=	0x00bb
+                    00BC    358 _PS	=	0x00bc
+                    00D0    359 _P	=	0x00d0
+                    00D1    360 _F1	=	0x00d1
+                    00D2    361 _OV	=	0x00d2
+                    00D3    362 _RS0	=	0x00d3
+                    00D4    363 _RS1	=	0x00d4
+                    00D5    364 _F0	=	0x00d5
+                    00D6    365 _AC	=	0x00d6
+                    00D7    366 _CY	=	0x00d7
+                    00AD    367 _ET2	=	0x00ad
+                    00BD    368 _PT2	=	0x00bd
+                    00C8    369 _T2CON_0	=	0x00c8
+                    00C9    370 _T2CON_1	=	0x00c9
+                    00CA    371 _T2CON_2	=	0x00ca
+                    00CB    372 _T2CON_3	=	0x00cb
+                    00CC    373 _T2CON_4	=	0x00cc
+                    00CD    374 _T2CON_5	=	0x00cd
+                    00CE    375 _T2CON_6	=	0x00ce
+                    00CF    376 _T2CON_7	=	0x00cf
+                    00C8    377 _CP_RL2	=	0x00c8
+                    00C9    378 _C_T2	=	0x00c9
+                    00CA    379 _TR2	=	0x00ca
+                    00CB    380 _EXEN2	=	0x00cb
+                    00CC    381 _TCLK	=	0x00cc
+                    00CD    382 _RCLK	=	0x00cd
+                    00CE    383 _EXF2	=	0x00ce
+                    00CF    384 _TF2	=	0x00cf
+                    00DF    385 _CF	=	0x00df
+                    00DE    386 _CR	=	0x00de
+                    00DC    387 _CCF4	=	0x00dc
+                    00DB    388 _CCF3	=	0x00db
+                    00DA    389 _CCF2	=	0x00da
+                    00D9    390 _CCF1	=	0x00d9
+                    00D8    391 _CCF0	=	0x00d8
+                    00AE    392 _EC	=	0x00ae
+                    00BE    393 _PPCL	=	0x00be
+                    00BD    394 _PT2L	=	0x00bd
+                    00BC    395 _PLS	=	0x00bc
+                    00BB    396 _PT1L	=	0x00bb
+                    00BA    397 _PX1L	=	0x00ba
+                    00B9    398 _PT0L	=	0x00b9
+                    00B8    399 _PX0L	=	0x00b8
+                    00C0    400 _P4_0	=	0x00c0
+                    00C1    401 _P4_1	=	0x00c1
+                    00C2    402 _P4_2	=	0x00c2
+                    00C3    403 _P4_3	=	0x00c3
+                    00C4    404 _P4_4	=	0x00c4
+                    00C5    405 _P4_5	=	0x00c5
+                    00C6    406 _P4_6	=	0x00c6
+                    00C7    407 _P4_7	=	0x00c7
+                    00D8    408 _P5_0	=	0x00d8
+                    00D9    409 _P5_1	=	0x00d9
+                    00DA    410 _P5_2	=	0x00da
+                    00DB    411 _P5_3	=	0x00db
+                    00DC    412 _P5_4	=	0x00dc
+                    00DD    413 _P5_5	=	0x00dd
+                    00DE    414 _P5_6	=	0x00de
+                    00DF    415 _P5_7	=	0x00df
+                            416 ;--------------------------------------------------------
+                            417 ; overlayable register banks
+                            418 ;--------------------------------------------------------
+                            419 	.area REG_BANK_0	(REL,OVR,DATA)
+   0000                     420 	.ds 8
+                            421 ;--------------------------------------------------------
+                            422 ; internal ram data
+                            423 ;--------------------------------------------------------
+                            424 	.area DSEG    (DATA)
+                            425 ;--------------------------------------------------------
+                            426 ; overlayable items in internal ram 
+                            427 ;--------------------------------------------------------
+                            428 	.area OSEG    (OVR,DATA)
+                            429 ;--------------------------------------------------------
+                            430 ; indirectly addressable internal ram data
+                            431 ;--------------------------------------------------------
+                            432 	.area ISEG    (DATA)
+                            433 ;--------------------------------------------------------
+                            434 ; bit data
+                            435 ;--------------------------------------------------------
+                            436 	.area BSEG    (BIT)
+                            437 ;--------------------------------------------------------
+                            438 ; paged external ram data
+                            439 ;--------------------------------------------------------
+                            440 	.area PSEG    (PAG,XDATA)
+                            441 ;--------------------------------------------------------
+                            442 ; external ram data
+                            443 ;--------------------------------------------------------
+                            444 	.area XSEG    (XDATA)
+   0000                     445 _in_origin::
+   0000                     446 	.ds 1
+                            447 ;--------------------------------------------------------
+                            448 ; external initialized ram data
+                            449 ;--------------------------------------------------------
+                            450 	.area XISEG   (XDATA)
+                            451 	.area HOME    (CODE)
+                            452 	.area GSINIT0 (CODE)
+                            453 	.area GSINIT1 (CODE)
+                            454 	.area GSINIT2 (CODE)
+                            455 	.area GSINIT3 (CODE)
+                            456 	.area GSINIT4 (CODE)
+                            457 	.area GSINIT5 (CODE)
+                            458 	.area GSINIT  (CODE)
+                            459 	.area GSFINAL (CODE)
+                            460 	.area CSEG    (CODE)
+                            461 ;--------------------------------------------------------
+                            462 ; global & static initialisations
+                            463 ;--------------------------------------------------------
+                            464 	.area HOME    (CODE)
+                            465 	.area GSINIT  (CODE)
+                            466 	.area GSFINAL (CODE)
+                            467 	.area GSINIT  (CODE)
+                            468 ;--------------------------------------------------------
+                            469 ; Home
+                            470 ;--------------------------------------------------------
+                            471 	.area HOME    (CODE)
+                            472 	.area CSEG    (CODE)
+                            473 ;--------------------------------------------------------
+                            474 ; code
+                            475 ;--------------------------------------------------------
+                            476 	.area CSEG    (CODE)
+                            477 ;------------------------------------------------------------
+                            478 ;Allocation info for local variables in function 'origin_menu_1_1'
+                            479 ;------------------------------------------------------------
+                            480 ;------------------------------------------------------------
+                            481 ;	menu.c:8: void origin_menu_1_1(void)              //origin setting menu option
+                            482 ;	-----------------------------------------
+                            483 ;	 function origin_menu_1_1
+                            484 ;	-----------------------------------------
+   0000                     485 _origin_menu_1_1:
+                    0002    486 	ar2 = 0x02
+                    0003    487 	ar3 = 0x03
+                    0004    488 	ar4 = 0x04
+                    0005    489 	ar5 = 0x05
+                    0006    490 	ar6 = 0x06
+                    0007    491 	ar7 = 0x07
+                    0000    492 	ar0 = 0x00
+                    0001    493 	ar1 = 0x01
+                            494 ;	menu.c:10: in_origin = 1;
+                            495 ;	genAssign
+   0000 90s00r00            496 	mov	dptr,#_in_origin
+   0003 74 01               497 	mov	a,#0x01
+   0005 F0                  498 	movx	@dptr,a
+                            499 ;	menu.c:11: lcd_screen_2_1();
+                            500 ;	genCall
+   0006 12s00r00            501 	lcall	_lcd_screen_2_1
+                            502 ;	menu.c:12: cursor_x = 0;
+                            503 ;	genAssign
+   0009 90s00r00            504 	mov	dptr,#_cursor_x
+                            505 ;	Peephole 181	changed mov to clr
+   000C E4                  506 	clr	a
+   000D F0                  507 	movx	@dptr,a
+                            508 ;	menu.c:13: origin_menu_x(2,6,2,8);            //custom logo for x dir
+                            509 ;	genAssign
+   000E 90s00r00            510 	mov	dptr,#_origin_menu_x_PARM_2
+   0011 74 06               511 	mov	a,#0x06
+   0013 F0                  512 	movx	@dptr,a
+                            513 ;	genAssign
+   0014 90s00r00            514 	mov	dptr,#_origin_menu_x_PARM_3
+   0017 74 02               515 	mov	a,#0x02
+   0019 F0                  516 	movx	@dptr,a
+                            517 ;	genAssign
+   001A 90s00r00            518 	mov	dptr,#_origin_menu_x_PARM_4
+   001D 74 08               519 	mov	a,#0x08
+   001F F0                  520 	movx	@dptr,a
+                            521 ;	genCall
+   0020 75 82 02            522 	mov	dpl,#0x02
+   0023 12s00r00            523 	lcall	_origin_menu_x
+                            524 ;	menu.c:14: origin_menu_y(1,7,3,7);            //custom logo for y dir
+                            525 ;	genAssign
+   0026 90s00r00            526 	mov	dptr,#_origin_menu_y_PARM_2
+   0029 74 07               527 	mov	a,#0x07
+   002B F0                  528 	movx	@dptr,a
+                            529 ;	genAssign
+   002C 90s00r00            530 	mov	dptr,#_origin_menu_y_PARM_3
+   002F 74 03               531 	mov	a,#0x03
+   0031 F0                  532 	movx	@dptr,a
+                            533 ;	genAssign
+   0032 90s00r00            534 	mov	dptr,#_origin_menu_y_PARM_4
+   0035 74 07               535 	mov	a,#0x07
+   0037 F0                  536 	movx	@dptr,a
+                            537 ;	genCall
+   0038 75 82 01            538 	mov	dpl,#0x01
+   003B 12s00r00            539 	lcall	_origin_menu_y
+                            540 ;	menu.c:15: menu_action = 0;
+                            541 ;	genAssign
+   003E 90s00r00            542 	mov	dptr,#_menu_action
+                            543 ;	Peephole 181	changed mov to clr
+                            544 ;	menu.c:16: end_origin = 0;
+                            545 ;	genAssign
+                            546 ;	Peephole 181	changed mov to clr
+                            547 ;	Peephole 219.a	removed redundant clear
+   0041 E4                  548 	clr	a
+   0042 F0                  549 	movx	@dptr,a
+   0043 90s00r00            550 	mov	dptr,#_end_origin
+   0046 F0                  551 	movx	@dptr,a
+                            552 ;	menu.c:17: while(1)
+   0047                     553 00128$:
+                            554 ;	menu.c:19: if(menu_action == BACK)
+                            555 ;	genAssign
+   0047 90s00r00            556 	mov	dptr,#_menu_action
+   004A E0                  557 	movx	a,@dptr
+   004B FA                  558 	mov	r2,a
+                            559 ;	genCmpEq
+                            560 ;	gencjneshort
+                            561 ;	Peephole 112.b	changed ljmp to sjmp
+                            562 ;	Peephole 198.b	optimized misc jump sequence
+   004C BA 0B 2D            563 	cjne	r2,#0x0B,00107$
+                            564 ;	Peephole 200.b	removed redundant sjmp
+                            565 ;	Peephole 300	removed redundant label 00148$
+                            566 ;	Peephole 300	removed redundant label 00149$
+                            567 ;	menu.c:21: menu_action = 0;
+                            568 ;	genAssign
+   004F 90s00r00            569 	mov	dptr,#_menu_action
+                            570 ;	Peephole 181	changed mov to clr
+   0052 E4                  571 	clr	a
+   0053 F0                  572 	movx	@dptr,a
+                            573 ;	menu.c:22: while(menu_action != BACK)
+   0054                     574 00103$:
+                            575 ;	genAssign
+   0054 90s00r00            576 	mov	dptr,#_menu_action
+   0057 E0                  577 	movx	a,@dptr
+   0058 FA                  578 	mov	r2,a
+                            579 ;	genCmpEq
+                            580 ;	gencjneshort
+   0059 BA 0B 02            581 	cjne	r2,#0x0B,00150$
+                            582 ;	Peephole 112.b	changed ljmp to sjmp
+   005C 80 15               583 	sjmp	00105$
+   005E                     584 00150$:
+                            585 ;	menu.c:24: line_mod_left();
+                            586 ;	genCall
+   005E 12s00r00            587 	lcall	_line_mod_left
+                            588 ;	menu.c:25: if(end_origin == 1)
+                            589 ;	genAssign
+   0061 90s00r00            590 	mov	dptr,#_end_origin
+   0064 E0                  591 	movx	a,@dptr
+   0065 FA                  592 	mov	r2,a
+                            593 ;	genCmpEq
+                            594 ;	gencjneshort
+   0066 BA 01 02            595 	cjne	r2,#0x01,00151$
+                            596 ;	Peephole 112.b	changed ljmp to sjmp
+   0069 80 08               597 	sjmp	00105$
+   006B                     598 00151$:
+                            599 ;	menu.c:27: move_left(STEPS_PER_UNIT);
+                            600 ;	genCall
+                            601 ;	Peephole 182.b	used 16 bit load of dptr
+   006B 90 00 19            602 	mov	dptr,#0x0019
+   006E 12s00r00            603 	lcall	_move_left
+                            604 ;	Peephole 112.b	changed ljmp to sjmp
+   0071 80 E1               605 	sjmp	00103$
+   0073                     606 00105$:
+                            607 ;	menu.c:30: menu_action = 0;
+                            608 ;	genAssign
+   0073 90s00r00            609 	mov	dptr,#_menu_action
+                            610 ;	Peephole 181	changed mov to clr
+                            611 ;	menu.c:31: end_origin = 0;
+                            612 ;	genAssign
+                            613 ;	Peephole 181	changed mov to clr
+                            614 ;	Peephole 219.a	removed redundant clear
+   0076 E4                  615 	clr	a
+   0077 F0                  616 	movx	@dptr,a
+   0078 90s00r00            617 	mov	dptr,#_end_origin
+   007B F0                  618 	movx	@dptr,a
+   007C                     619 00107$:
+                            620 ;	menu.c:34: if(menu_action == ENTER)
+                            621 ;	genAssign
+   007C 90s00r00            622 	mov	dptr,#_menu_action
+   007F E0                  623 	movx	a,@dptr
+   0080 FA                  624 	mov	r2,a
+                            625 ;	genCmpEq
+                            626 ;	gencjneshort
+                            627 ;	Peephole 112.b	changed ljmp to sjmp
+                            628 ;	Peephole 198.b	optimized misc jump sequence
+   0081 BA 0E 2D            629 	cjne	r2,#0x0E,00114$
+                            630 ;	Peephole 200.b	removed redundant sjmp
+                            631 ;	Peephole 300	removed redundant label 00152$
+                            632 ;	Peephole 300	removed redundant label 00153$
+                            633 ;	menu.c:36: menu_action = 0;
+                            634 ;	genAssign
+   0084 90s00r00            635 	mov	dptr,#_menu_action
+                            636 ;	Peephole 181	changed mov to clr
+   0087 E4                  637 	clr	a
+   0088 F0                  638 	movx	@dptr,a
+                            639 ;	menu.c:37: while(menu_action != ENTER)
+   0089                     640 00110$:
+                            641 ;	genAssign
+   0089 90s00r00            642 	mov	dptr,#_menu_action
+   008C E0                  643 	movx	a,@dptr
+   008D FA                  644 	mov	r2,a
+                            645 ;	genCmpEq
+                            646 ;	gencjneshort
+   008E BA 0E 02            647 	cjne	r2,#0x0E,00154$
+                            648 ;	Peephole 112.b	changed ljmp to sjmp
+   0091 80 15               649 	sjmp	00112$
+   0093                     650 00154$:
+                            651 ;	menu.c:39: line_mod_right();
+                            652 ;	genCall
+   0093 12s00r00            653 	lcall	_line_mod_right
+                            654 ;	menu.c:40: if(end_origin == 1)
+                            655 ;	genAssign
+   0096 90s00r00            656 	mov	dptr,#_end_origin
+   0099 E0                  657 	movx	a,@dptr
+   009A FA                  658 	mov	r2,a
+                            659 ;	genCmpEq
+                            660 ;	gencjneshort
+   009B BA 01 02            661 	cjne	r2,#0x01,00155$
+                            662 ;	Peephole 112.b	changed ljmp to sjmp
+   009E 80 08               663 	sjmp	00112$
+   00A0                     664 00155$:
+                            665 ;	menu.c:42: move_right(STEPS_PER_UNIT);
+                            666 ;	genCall
+                            667 ;	Peephole 182.b	used 16 bit load of dptr
+   00A0 90 00 19            668 	mov	dptr,#0x0019
+   00A3 12s00r00            669 	lcall	_move_right
+                            670 ;	Peephole 112.b	changed ljmp to sjmp
+   00A6 80 E1               671 	sjmp	00110$
+   00A8                     672 00112$:
+                            673 ;	menu.c:44: menu_action = 0;
+                            674 ;	genAssign
+   00A8 90s00r00            675 	mov	dptr,#_menu_action
+                            676 ;	Peephole 181	changed mov to clr
+                            677 ;	menu.c:45: end_origin = 0;
+                            678 ;	genAssign
+                            679 ;	Peephole 181	changed mov to clr
+                            680 ;	Peephole 219.a	removed redundant clear
+   00AB E4                  681 	clr	a
+   00AC F0                  682 	movx	@dptr,a
+   00AD 90s00r00            683 	mov	dptr,#_end_origin
+   00B0 F0                  684 	movx	@dptr,a
+   00B1                     685 00114$:
+                            686 ;	menu.c:48: if(menu_action == SCROLL_UP)
+                            687 ;	genAssign
+   00B1 90s00r00            688 	mov	dptr,#_menu_action
+   00B4 E0                  689 	movx	a,@dptr
+   00B5 FA                  690 	mov	r2,a
+                            691 ;	genCmpEq
+                            692 ;	gencjneshort
+                            693 ;	Peephole 112.b	changed ljmp to sjmp
+                            694 ;	Peephole 198.b	optimized misc jump sequence
+   00B6 BA 0A 20            695 	cjne	r2,#0x0A,00119$
+                            696 ;	Peephole 200.b	removed redundant sjmp
+                            697 ;	Peephole 300	removed redundant label 00156$
+                            698 ;	Peephole 300	removed redundant label 00157$
+                            699 ;	menu.c:50: menu_action = 0;
+                            700 ;	genAssign
+   00B9 90s00r00            701 	mov	dptr,#_menu_action
+                            702 ;	Peephole 181	changed mov to clr
+   00BC E4                  703 	clr	a
+   00BD F0                  704 	movx	@dptr,a
+                            705 ;	menu.c:51: while(menu_action != SCROLL_UP)
+   00BE                     706 00115$:
+                            707 ;	genAssign
+   00BE 90s00r00            708 	mov	dptr,#_menu_action
+   00C1 E0                  709 	movx	a,@dptr
+   00C2 FA                  710 	mov	r2,a
+                            711 ;	genCmpEq
+                            712 ;	gencjneshort
+   00C3 BA 0A 02            713 	cjne	r2,#0x0A,00158$
+                            714 ;	Peephole 112.b	changed ljmp to sjmp
+   00C6 80 08               715 	sjmp	00117$
+   00C8                     716 00158$:
+                            717 ;	menu.c:53: move_up(STEPS_PER_UNIT);
+                            718 ;	genCall
+                            719 ;	Peephole 182.b	used 16 bit load of dptr
+   00C8 90 00 19            720 	mov	dptr,#0x0019
+   00CB 12s00r00            721 	lcall	_move_up
+                            722 ;	Peephole 112.b	changed ljmp to sjmp
+   00CE 80 EE               723 	sjmp	00115$
+   00D0                     724 00117$:
+                            725 ;	menu.c:55: menu_action = 0;
+                            726 ;	genAssign
+   00D0 90s00r00            727 	mov	dptr,#_menu_action
+                            728 ;	Peephole 181	changed mov to clr
+                            729 ;	menu.c:56: end_origin = 0;
+                            730 ;	genAssign
+                            731 ;	Peephole 181	changed mov to clr
+                            732 ;	Peephole 219.a	removed redundant clear
+   00D3 E4                  733 	clr	a
+   00D4 F0                  734 	movx	@dptr,a
+   00D5 90s00r00            735 	mov	dptr,#_end_origin
+   00D8 F0                  736 	movx	@dptr,a
+   00D9                     737 00119$:
+                            738 ;	menu.c:59: if(menu_action == SCROLL_DOWN)
+                            739 ;	genAssign
+   00D9 90s00r00            740 	mov	dptr,#_menu_action
+   00DC E0                  741 	movx	a,@dptr
+   00DD FA                  742 	mov	r2,a
+                            743 ;	genCmpEq
+                            744 ;	gencjneshort
+                            745 ;	Peephole 112.b	changed ljmp to sjmp
+                            746 ;	Peephole 198.b	optimized misc jump sequence
+   00DE BA 0F 20            747 	cjne	r2,#0x0F,00124$
+                            748 ;	Peephole 200.b	removed redundant sjmp
+                            749 ;	Peephole 300	removed redundant label 00159$
+                            750 ;	Peephole 300	removed redundant label 00160$
+                            751 ;	menu.c:61: menu_action = 0;
+                            752 ;	genAssign
+   00E1 90s00r00            753 	mov	dptr,#_menu_action
+                            754 ;	Peephole 181	changed mov to clr
+   00E4 E4                  755 	clr	a
+   00E5 F0                  756 	movx	@dptr,a
+                            757 ;	menu.c:62: while(menu_action != SCROLL_DOWN)
+   00E6                     758 00120$:
+                            759 ;	genAssign
+   00E6 90s00r00            760 	mov	dptr,#_menu_action
+   00E9 E0                  761 	movx	a,@dptr
+   00EA FA                  762 	mov	r2,a
+                            763 ;	genCmpEq
+                            764 ;	gencjneshort
+   00EB BA 0F 02            765 	cjne	r2,#0x0F,00161$
+                            766 ;	Peephole 112.b	changed ljmp to sjmp
+   00EE 80 08               767 	sjmp	00122$
+   00F0                     768 00161$:
+                            769 ;	menu.c:64: move_down(STEPS_PER_UNIT);
+                            770 ;	genCall
+                            771 ;	Peephole 182.b	used 16 bit load of dptr
+   00F0 90 00 19            772 	mov	dptr,#0x0019
+   00F3 12s00r00            773 	lcall	_move_down
+                            774 ;	Peephole 112.b	changed ljmp to sjmp
+   00F6 80 EE               775 	sjmp	00120$
+   00F8                     776 00122$:
+                            777 ;	menu.c:66: menu_action = 0;
+                            778 ;	genAssign
+   00F8 90s00r00            779 	mov	dptr,#_menu_action
+                            780 ;	Peephole 181	changed mov to clr
+                            781 ;	menu.c:67: end_origin = 0;
+                            782 ;	genAssign
+                            783 ;	Peephole 181	changed mov to clr
+                            784 ;	Peephole 219.a	removed redundant clear
+   00FB E4                  785 	clr	a
+   00FC F0                  786 	movx	@dptr,a
+   00FD 90s00r00            787 	mov	dptr,#_end_origin
+   0100 F0                  788 	movx	@dptr,a
+   0101                     789 00124$:
+                            790 ;	menu.c:70: if(menu_action == VALUE_SET)   //condition for exit loop
+                            791 ;	genAssign
+   0101 90s00r00            792 	mov	dptr,#_menu_action
+   0104 E0                  793 	movx	a,@dptr
+   0105 FA                  794 	mov	r2,a
+                            795 ;	genCmpEq
+                            796 ;	gencjneshort
+   0106 BA 0D 02            797 	cjne	r2,#0x0D,00162$
+   0109 80 03               798 	sjmp	00163$
+   010B                     799 00162$:
+   010B 02s00r47            800 	ljmp	00128$
+   010E                     801 00163$:
+                            802 ;	menu.c:72: menu_action = 0;
+                            803 ;	genAssign
+   010E 90s00r00            804 	mov	dptr,#_menu_action
+                            805 ;	Peephole 181	changed mov to clr
+   0111 E4                  806 	clr	a
+   0112 F0                  807 	movx	@dptr,a
+                            808 ;	menu.c:73: Lcd8_Clear();
+                            809 ;	genCall
+   0113 12s00r00            810 	lcall	_Lcd8_Clear
+                            811 ;	menu.c:74: Lcd_gotoxy(1,3);
+                            812 ;	genAssign
+   0116 90s00r00            813 	mov	dptr,#_Lcd_gotoxy_PARM_2
+   0119 74 03               814 	mov	a,#0x03
+   011B F0                  815 	movx	@dptr,a
+                            816 ;	genCall
+   011C 75 82 01            817 	mov	dpl,#0x01
+   011F 12s00r00            818 	lcall	_Lcd_gotoxy
+                            819 ;	menu.c:75: Lcd8_Write_String("ORIGIN SET");
+                            820 ;	genCall
+                            821 ;	Peephole 182.a	used 16 bit load of DPTR
+   0122 90s00r00            822 	mov	dptr,#__str_0
+   0125 75 F0 80            823 	mov	b,#0x80
+   0128 12s00r00            824 	lcall	_Lcd8_Write_String
+                            825 ;	menu.c:76: delay_sec(1);
+                            826 ;	genCall
+   012B 75 82 01            827 	mov	dpl,#0x01
+   012E 12s00r00            828 	lcall	_delay_sec
+                            829 ;	menu.c:77: lcd_screen_2();             //menu - origin/quick/custom
+                            830 ;	genCall
+   0131 12s00r00            831 	lcall	_lcd_screen_2
+                            832 ;	menu.c:78: cursor_display(1);          //cursor display initial location
+                            833 ;	genCall
+   0134 75 82 01            834 	mov	dpl,#0x01
+   0137 12s00r00            835 	lcall	_cursor_display
+                            836 ;	menu.c:79: menu_action=0;
+                            837 ;	genAssign
+   013A 90s00r00            838 	mov	dptr,#_menu_action
+                            839 ;	Peephole 181	changed mov to clr
+                            840 ;	menu.c:80: cursor_x = 0;
+                            841 ;	genAssign
+                            842 ;	Peephole 181	changed mov to clr
+                            843 ;	Peephole 219.a	removed redundant clear
+                            844 ;	menu.c:81: in_origin = 0;
+                            845 ;	genAssign
+                            846 ;	Peephole 181	changed mov to clr
+   013D E4                  847 	clr	a
+   013E F0                  848 	movx	@dptr,a
+   013F 90s00r00            849 	mov	dptr,#_cursor_x
+   0142 F0                  850 	movx	@dptr,a
+   0143 90s00r00            851 	mov	dptr,#_in_origin
+                            852 ;	Peephole 219.b	removed redundant clear
+   0146 F0                  853 	movx	@dptr,a
+                            854 ;	menu.c:82: break;
+                            855 ;	Peephole 300	removed redundant label 00130$
+   0147 22                  856 	ret
+                            857 ;------------------------------------------------------------
+                            858 ;Allocation info for local variables in function 'quick_menu_1_2'
+                            859 ;------------------------------------------------------------
+                            860 ;------------------------------------------------------------
+                            861 ;	menu.c:87: void quick_menu_1_2(void)        //quick print menu option
+                            862 ;	-----------------------------------------
+                            863 ;	 function quick_menu_1_2
+                            864 ;	-----------------------------------------
+   0148                     865 _quick_menu_1_2:
+                            866 ;	menu.c:89: lcd_screen_2_2();            //cursor display - initial location
+                            867 ;	genCall
+   0148 12s00r00            868 	lcall	_lcd_screen_2_2
+                            869 ;	menu.c:90: cursor_display(1);
+                            870 ;	genCall
+   014B 75 82 01            871 	mov	dpl,#0x01
+   014E 12s00r00            872 	lcall	_cursor_display
+                            873 ;	menu.c:91: cursor_x = 0;
+                            874 ;	genAssign
+   0151 90s00r00            875 	mov	dptr,#_cursor_x
+                            876 ;	Peephole 181	changed mov to clr
+   0154 E4                  877 	clr	a
+   0155 F0                  878 	movx	@dptr,a
+                            879 ;	menu.c:92: while(1)
+   0156                     880 00115$:
+                            881 ;	menu.c:94: menu_scroll();
+                            882 ;	genCall
+   0156 12s00r00            883 	lcall	_menu_scroll
+                            884 ;	menu.c:95: if(menu_action == ENTER)            //enter option
+                            885 ;	genAssign
+   0159 90s00r00            886 	mov	dptr,#_menu_action
+   015C E0                  887 	movx	a,@dptr
+   015D FA                  888 	mov	r2,a
+                            889 ;	genCmpEq
+                            890 ;	gencjneshort
+   015E BA 0E 02            891 	cjne	r2,#0x0E,00125$
+   0161 80 03               892 	sjmp	00126$
+   0163                     893 00125$:
+   0163 02s02r06            894 	ljmp	00112$
+   0166                     895 00126$:
+                            896 ;	menu.c:97: menu_action = 0;
+                            897 ;	genAssign
+   0166 90s00r00            898 	mov	dptr,#_menu_action
+                            899 ;	Peephole 181	changed mov to clr
+   0169 E4                  900 	clr	a
+   016A F0                  901 	movx	@dptr,a
+                            902 ;	menu.c:98: if(cursor_x == 0)               //3x3 SQUARE
+                            903 ;	genAssign
+   016B 90s00r00            904 	mov	dptr,#_cursor_x
+   016E E0                  905 	movx	a,@dptr
+                            906 ;	genIfx
+   016F FB                  907 	mov	r3,a
+                            908 ;	Peephole 105	removed redundant mov
+                            909 ;	genIfxJump
+                            910 ;	Peephole 108.b	removed ljmp by inverse jump logic
+   0170 70 2C               911 	jnz	00107$
+                            912 ;	Peephole 300	removed redundant label 00127$
+                            913 ;	menu.c:100: hour_glass(1,15);           //hour glass logo next to 1x1 square
+                            914 ;	genAssign
+   0172 90s00r00            915 	mov	dptr,#_hour_glass_PARM_2
+   0175 74 0F               916 	mov	a,#0x0F
+   0177 F0                  917 	movx	@dptr,a
+                            918 ;	genCall
+   0178 75 82 01            919 	mov	dpl,#0x01
+   017B 12s00r00            920 	lcall	_hour_glass
+                            921 ;	menu.c:101: pen_down();
+                            922 ;	genCall
+   017E 12s00r00            923 	lcall	_pen_down
+                            924 ;	menu.c:102: square_draw(3);
+                            925 ;	genCall
+   0181 75 82 03            926 	mov	dpl,#0x03
+   0184 12s00r00            927 	lcall	_square_draw
+                            928 ;	menu.c:103: pen_up();
+                            929 ;	genCall
+   0187 12s00r00            930 	lcall	_pen_up
+                            931 ;	menu.c:104: Lcd_gotoxy(1,15);               //clear hour glass logo
+                            932 ;	genAssign
+   018A 90s00r00            933 	mov	dptr,#_Lcd_gotoxy_PARM_2
+   018D 74 0F               934 	mov	a,#0x0F
+   018F F0                  935 	movx	@dptr,a
+                            936 ;	genCall
+   0190 75 82 01            937 	mov	dpl,#0x01
+   0193 12s00r00            938 	lcall	_Lcd_gotoxy
+                            939 ;	menu.c:105: Lcd8_Write_Char(' ');
+                            940 ;	genCall
+   0196 75 82 20            941 	mov	dpl,#0x20
+   0199 12s00r00            942 	lcall	_Lcd8_Write_Char
+                            943 ;	Peephole 112.b	changed ljmp to sjmp
+   019C 80 B8               944 	sjmp	00115$
+   019E                     945 00107$:
+                            946 ;	menu.c:107: else if(cursor_x == 1)           //3x3 TRIANGLES
+                            947 ;	genCmpEq
+                            948 ;	gencjneshort
+                            949 ;	Peephole 112.b	changed ljmp to sjmp
+                            950 ;	Peephole 198.b	optimized misc jump sequence
+   019E BB 01 2C            951 	cjne	r3,#0x01,00104$
+                            952 ;	Peephole 200.b	removed redundant sjmp
+                            953 ;	Peephole 300	removed redundant label 00128$
+                            954 ;	Peephole 300	removed redundant label 00129$
+                            955 ;	menu.c:109: hour_glass(2,15);           //hour glass logo next to 1x1 triangle
+                            956 ;	genAssign
+   01A1 90s00r00            957 	mov	dptr,#_hour_glass_PARM_2
+   01A4 74 0F               958 	mov	a,#0x0F
+   01A6 F0                  959 	movx	@dptr,a
+                            960 ;	genCall
+   01A7 75 82 02            961 	mov	dpl,#0x02
+   01AA 12s00r00            962 	lcall	_hour_glass
+                            963 ;	menu.c:110: pen_down();
+                            964 ;	genCall
+   01AD 12s00r00            965 	lcall	_pen_down
+                            966 ;	menu.c:111: triangle_draw(3);
+                            967 ;	genCall
+   01B0 75 82 03            968 	mov	dpl,#0x03
+   01B3 12s00r00            969 	lcall	_triangle_draw
+                            970 ;	menu.c:112: pen_up();
+                            971 ;	genCall
+   01B6 12s00r00            972 	lcall	_pen_up
+                            973 ;	menu.c:113: Lcd_gotoxy(2,15);               //clear hour glass logo
+                            974 ;	genAssign
+   01B9 90s00r00            975 	mov	dptr,#_Lcd_gotoxy_PARM_2
+   01BC 74 0F               976 	mov	a,#0x0F
+   01BE F0                  977 	movx	@dptr,a
+                            978 ;	genCall
+   01BF 75 82 02            979 	mov	dpl,#0x02
+   01C2 12s00r00            980 	lcall	_Lcd_gotoxy
+                            981 ;	menu.c:114: Lcd8_Write_Char(' ');
+                            982 ;	genCall
+   01C5 75 82 20            983 	mov	dpl,#0x20
+   01C8 12s00r00            984 	lcall	_Lcd8_Write_Char
+                            985 ;	Peephole 112.b	changed ljmp to sjmp
+   01CB 80 89               986 	sjmp	00115$
+   01CD                     987 00104$:
+                            988 ;	menu.c:116: else if(cursor_x == 2)           //3x3 CIRCLE
+                            989 ;	genCmpEq
+                            990 ;	gencjneshort
+   01CD BB 02 02            991 	cjne	r3,#0x02,00130$
+   01D0 80 03               992 	sjmp	00131$
+   01D2                     993 00130$:
+   01D2 02s01r56            994 	ljmp	00115$
+   01D5                     995 00131$:
+                            996 ;	menu.c:118: hour_glass(3,15);           //hour glass logo next to 1x1 circle
+                            997 ;	genAssign
+   01D5 90s00r00            998 	mov	dptr,#_hour_glass_PARM_2
+   01D8 74 0F               999 	mov	a,#0x0F
+   01DA F0                 1000 	movx	@dptr,a
+                           1001 ;	genCall
+   01DB 75 82 03           1002 	mov	dpl,#0x03
+   01DE 12s00r00           1003 	lcall	_hour_glass
+                           1004 ;	menu.c:119: pen_down();
+                           1005 ;	genCall
+   01E1 12s00r00           1006 	lcall	_pen_down
+                           1007 ;	menu.c:120: circle_draw(3);
+                           1008 ;	genCall
+                           1009 ;	Peephole 182.b	used 16 bit load of dptr
+   01E4 90 00 00           1010 	mov	dptr,#0x0000
+                           1011 ;	peephole 177.h	optimized mov sequence
+   01E7 74 40              1012 	mov	a,#0x40
+   01E9 F5 F0              1013 	mov	b,a
+   01EB 12s00r00           1014 	lcall	_circle_draw
+                           1015 ;	menu.c:121: pen_up();
+                           1016 ;	genCall
+   01EE 12s00r00           1017 	lcall	_pen_up
+                           1018 ;	menu.c:122: Lcd_gotoxy(3,15);               //clear hour glass logo
+                           1019 ;	genAssign
+   01F1 90s00r00           1020 	mov	dptr,#_Lcd_gotoxy_PARM_2
+   01F4 74 0F              1021 	mov	a,#0x0F
+   01F6 F0                 1022 	movx	@dptr,a
+                           1023 ;	genCall
+   01F7 75 82 03           1024 	mov	dpl,#0x03
+   01FA 12s00r00           1025 	lcall	_Lcd_gotoxy
+                           1026 ;	menu.c:123: Lcd8_Write_Char(' ');
+                           1027 ;	genCall
+   01FD 75 82 20           1028 	mov	dpl,#0x20
+   0200 12s00r00           1029 	lcall	_Lcd8_Write_Char
+   0203 02s01r56           1030 	ljmp	00115$
+   0206                    1031 00112$:
+                           1032 ;	menu.c:126: else if(menu_action == BACK)
+                           1033 ;	genCmpEq
+                           1034 ;	gencjneshort
+   0206 BA 0B 02           1035 	cjne	r2,#0x0B,00132$
+   0209 80 03              1036 	sjmp	00133$
+   020B                    1037 00132$:
+   020B 02s01r56           1038 	ljmp	00115$
+   020E                    1039 00133$:
+                           1040 ;	menu.c:128: cursor_x = 0;
+                           1041 ;	genAssign
+   020E 90s00r00           1042 	mov	dptr,#_cursor_x
+                           1043 ;	Peephole 181	changed mov to clr
+   0211 E4                 1044 	clr	a
+   0212 F0                 1045 	movx	@dptr,a
+                           1046 ;	menu.c:129: lcd_screen_2();             //menu - origin/quick/custom
+                           1047 ;	genCall
+   0213 12s00r00           1048 	lcall	_lcd_screen_2
+                           1049 ;	menu.c:130: cursor_display(1);          //cursor display - initial location
+                           1050 ;	genCall
+   0216 75 82 01           1051 	mov	dpl,#0x01
+   0219 12s00r00           1052 	lcall	_cursor_display
+                           1053 ;	menu.c:131: menu_action=0;
+                           1054 ;	genAssign
+   021C 90s00r00           1055 	mov	dptr,#_menu_action
+                           1056 ;	Peephole 181	changed mov to clr
+   021F E4                 1057 	clr	a
+   0220 F0                 1058 	movx	@dptr,a
+                           1059 ;	menu.c:132: delay_ms(1);
+                           1060 ;	genCall
+                           1061 ;	Peephole 182.b	used 16 bit load of dptr
+   0221 90 00 01           1062 	mov	dptr,#0x0001
+                           1063 ;	menu.c:133: break;
+                           1064 ;	Peephole 253.b	replaced lcall/ret with ljmp
+   0224 02s00r00           1065 	ljmp	_delay_ms
+                           1066 ;
+                           1067 ;------------------------------------------------------------
+                           1068 ;Allocation info for local variables in function 'custom_menu_1_3'
+                           1069 ;------------------------------------------------------------
+                           1070 ;------------------------------------------------------------
+                           1071 ;	menu.c:138: void custom_menu_1_3(void)      //custom print option
+                           1072 ;	-----------------------------------------
+                           1073 ;	 function custom_menu_1_3
+                           1074 ;	-----------------------------------------
+   0227                    1075 _custom_menu_1_3:
+                           1076 ;	menu.c:140: lcd_screen_2_3_2();          //cursor display - initial location
+                           1077 ;	genCall
+   0227 12s00r00           1078 	lcall	_lcd_screen_2_3_2
+                           1079 ;	menu.c:141: cursor_display(1);
+                           1080 ;	genCall
+   022A 75 82 01           1081 	mov	dpl,#0x01
+   022D 12s00r00           1082 	lcall	_cursor_display
+                           1083 ;	menu.c:142: cursor_x = 0;
+                           1084 ;	genAssign
+   0230 90s00r00           1085 	mov	dptr,#_cursor_x
+                           1086 ;	Peephole 181	changed mov to clr
+   0233 E4                 1087 	clr	a
+   0234 F0                 1088 	movx	@dptr,a
+                           1089 ;	menu.c:144: while(1)
+   0235                    1090 00112$:
+                           1091 ;	menu.c:146: menu_scroll();
+                           1092 ;	genCall
+   0235 12s00r00           1093 	lcall	_menu_scroll
+                           1094 ;	menu.c:147: if(menu_action == ENTER)            //enter option
+                           1095 ;	genAssign
+   0238 90s00r00           1096 	mov	dptr,#_menu_action
+   023B E0                 1097 	movx	a,@dptr
+   023C FA                 1098 	mov	r2,a
+                           1099 ;	genCmpEq
+                           1100 ;	gencjneshort
+                           1101 ;	Peephole 112.b	changed ljmp to sjmp
+                           1102 ;	Peephole 198.b	optimized misc jump sequence
+   023D BA 0E 6D           1103 	cjne	r2,#0x0E,00109$
+                           1104 ;	Peephole 200.b	removed redundant sjmp
+                           1105 ;	Peephole 300	removed redundant label 00121$
+                           1106 ;	Peephole 300	removed redundant label 00122$
+                           1107 ;	menu.c:149: menu_action = 0;
+                           1108 ;	genAssign
+   0240 90s00r00           1109 	mov	dptr,#_menu_action
+                           1110 ;	Peephole 181	changed mov to clr
+   0243 E4                 1111 	clr	a
+   0244 F0                 1112 	movx	@dptr,a
+                           1113 ;	menu.c:150: if(cursor_x == 0)               //start option
+                           1114 ;	genAssign
+   0245 90s00r00           1115 	mov	dptr,#_cursor_x
+   0248 E0                 1116 	movx	a,@dptr
+                           1117 ;	genIfx
+   0249 FB                 1118 	mov	r3,a
+                           1119 ;	Peephole 105	removed redundant mov
+                           1120 ;	genIfxJump
+                           1121 ;	Peephole 108.b	removed ljmp by inverse jump logic
+   024A 70 3D              1122 	jnz	00104$
+                           1123 ;	Peephole 300	removed redundant label 00123$
+                           1124 ;	menu.c:152: Lcd_gotoxy(2,11);           //clear stop logo
+                           1125 ;	genAssign
+   024C 90s00r00           1126 	mov	dptr,#_Lcd_gotoxy_PARM_2
+   024F 74 0B              1127 	mov	a,#0x0B
+   0251 F0                 1128 	movx	@dptr,a
+                           1129 ;	genCall
+   0252 75 82 02           1130 	mov	dpl,#0x02
+   0255 12s00r00           1131 	lcall	_Lcd_gotoxy
+                           1132 ;	menu.c:153: Lcd8_Write_Char(' ');
+                           1133 ;	genCall
+   0258 75 82 20           1134 	mov	dpl,#0x20
+   025B 12s00r00           1135 	lcall	_Lcd8_Write_Char
+                           1136 ;	menu.c:154: cursor_x=0;
+                           1137 ;	genAssign
+   025E 90s00r00           1138 	mov	dptr,#_cursor_x
+                           1139 ;	Peephole 181	changed mov to clr
+   0261 E4                 1140 	clr	a
+   0262 F0                 1141 	movx	@dptr,a
+                           1142 ;	menu.c:155: hour_glass(1,11);           //hour glas  logo display next to print
+                           1143 ;	genAssign
+   0263 90s00r00           1144 	mov	dptr,#_hour_glass_PARM_2
+   0266 74 0B              1145 	mov	a,#0x0B
+   0268 F0                 1146 	movx	@dptr,a
+                           1147 ;	genCall
+   0269 75 82 01           1148 	mov	dpl,#0x01
+   026C 12s00r00           1149 	lcall	_hour_glass
+                           1150 ;	menu.c:156: draw_string();              //main orint function
+                           1151 ;	genCall
+   026F 12s00r00           1152 	lcall	_draw_string
+                           1153 ;	menu.c:157: Lcd_gotoxy(1,11);            //clear hour glass logo
+                           1154 ;	genAssign
+   0272 90s00r00           1155 	mov	dptr,#_Lcd_gotoxy_PARM_2
+   0275 74 0B              1156 	mov	a,#0x0B
+   0277 F0                 1157 	movx	@dptr,a
+                           1158 ;	genCall
+   0278 75 82 01           1159 	mov	dpl,#0x01
+   027B 12s00r00           1160 	lcall	_Lcd_gotoxy
+                           1161 ;	menu.c:158: Lcd8_Write_Char(' ');
+                           1162 ;	genCall
+   027E 75 82 20           1163 	mov	dpl,#0x20
+   0281 12s00r00           1164 	lcall	_Lcd8_Write_Char
+                           1165 ;	menu.c:159: pen_up();
+                           1166 ;	genCall
+   0284 12s00r00           1167 	lcall	_pen_up
+                           1168 ;	Peephole 112.b	changed ljmp to sjmp
+   0287 80 AC              1169 	sjmp	00112$
+   0289                    1170 00104$:
+                           1171 ;	menu.c:161: else if(cursor_x == 1)           //stop option
+                           1172 ;	genCmpEq
+                           1173 ;	gencjneshort
+                           1174 ;	Peephole 112.b	changed ljmp to sjmp
+                           1175 ;	Peephole 198.b	optimized misc jump sequence
+   0289 BB 01 A9           1176 	cjne	r3,#0x01,00112$
+                           1177 ;	Peephole 200.b	removed redundant sjmp
+                           1178 ;	Peephole 300	removed redundant label 00124$
+                           1179 ;	Peephole 300	removed redundant label 00125$
+                           1180 ;	menu.c:163: Lcd_gotoxy(1,11);            //clear hour glass logo
+                           1181 ;	genAssign
+   028C 90s00r00           1182 	mov	dptr,#_Lcd_gotoxy_PARM_2
+   028F 74 0B              1183 	mov	a,#0x0B
+   0291 F0                 1184 	movx	@dptr,a
+                           1185 ;	genCall
+   0292 75 82 01           1186 	mov	dpl,#0x01
+   0295 12s00r00           1187 	lcall	_Lcd_gotoxy
+                           1188 ;	menu.c:164: Lcd8_Write_Char(' ');
+                           1189 ;	genCall
+   0298 75 82 20           1190 	mov	dpl,#0x20
+   029B 12s00r00           1191 	lcall	_Lcd8_Write_Char
+                           1192 ;	menu.c:165: stop_logo(2,11);             //exclamation logo next to stop
+                           1193 ;	genAssign
+   029E 90s00r00           1194 	mov	dptr,#_stop_logo_PARM_2
+   02A1 74 0B              1195 	mov	a,#0x0B
+   02A3 F0                 1196 	movx	@dptr,a
+                           1197 ;	genCall
+   02A4 75 82 02           1198 	mov	dpl,#0x02
+   02A7 12s00r00           1199 	lcall	_stop_logo
+   02AA 02s02r35           1200 	ljmp	00112$
+   02AD                    1201 00109$:
+                           1202 ;	menu.c:168: else if(menu_action == BACK)
+                           1203 ;	genCmpEq
+                           1204 ;	gencjneshort
+   02AD BA 0B 02           1205 	cjne	r2,#0x0B,00126$
+   02B0 80 03              1206 	sjmp	00127$
+   02B2                    1207 00126$:
+   02B2 02s02r35           1208 	ljmp	00112$
+   02B5                    1209 00127$:
+                           1210 ;	menu.c:170: lcd_screen_2();             //menu - origin/quick/custom
+                           1211 ;	genCall
+   02B5 12s00r00           1212 	lcall	_lcd_screen_2
+                           1213 ;	menu.c:171: cursor_display(1);          //cursor display initial location
+                           1214 ;	genCall
+   02B8 75 82 01           1215 	mov	dpl,#0x01
+   02BB 12s00r00           1216 	lcall	_cursor_display
+                           1217 ;	menu.c:172: menu_action=0;
+                           1218 ;	genAssign
+   02BE 90s00r00           1219 	mov	dptr,#_menu_action
+                           1220 ;	Peephole 181	changed mov to clr
+                           1221 ;	menu.c:173: cursor_x = 0;
+                           1222 ;	genAssign
+                           1223 ;	Peephole 181	changed mov to clr
+                           1224 ;	Peephole 219.a	removed redundant clear
+   02C1 E4                 1225 	clr	a
+   02C2 F0                 1226 	movx	@dptr,a
+   02C3 90s00r00           1227 	mov	dptr,#_cursor_x
+   02C6 F0                 1228 	movx	@dptr,a
+                           1229 ;	menu.c:174: break;
+                           1230 ;	Peephole 300	removed redundant label 00114$
+   02C7 22                 1231 	ret
+                           1232 	.area CSEG    (CODE)
+                           1233 	.area CONST   (CODE)
+   0000                    1234 __str_0:
+   0000 4F 52 49 47 49 4E  1235 	.ascii "ORIGIN SET"
+        20 53 45 54
+   000A 00                 1236 	.db 0x00
+                           1237 	.area XINIT   (CODE)
